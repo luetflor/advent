@@ -38,7 +38,6 @@ fn part_two() {
         'idloop: for id in r.start..r.end {
             let s = id.to_string();
             for i in 1..s.len() {
-                let repstr = find_repeating_string(&s, i);
                 match  find_repeating_string(&s, i) {
                     Some(x) => {
                         cumsum += id;
